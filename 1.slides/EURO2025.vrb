@@ -1,0 +1,40 @@
+\frametitle{Multiobjective Optimization Problem (MOP) notations}
+
+\[
+\begin{array}{clrclrrrl}
+\min   & \red{F}(x)   \\
+s.t.     & x  \ \in \ X
+\end{array}
+\]
+
+
+\vspace{-2mm}
+\noindent
+where:
+\vspace{2mm}
+%\vfill
+$$
+\begin{array}{rcl}
+%
+X \subseteq\mR^n  & \longrightarrow & \hbox{the set of feasible solutions}\\
+Y=F(X)\subseteq \mR^{\red{p}} & \longrightarrow & \hbox{the set of images}\\
+\notag
+\end{array}
+$$
+%\pause
+
+\hspace{0mm}Computing sets $\textcolor{blue}{X_E}$  and $\textcolor{blue}{Y_N}$ for MOP:
+
+\vspace{0mm}
+
+\begin{center}
+{$y=F(x)$\medskip\\
+$y^*\in Y$ is \textcolor{black}{nondominated}, if $\not\exists\, y\in Y$ such that $y_i\leq y^*_i,~\forall i$ and $ y\not= y^*$.\\
+			$\textcolor{blue}{Y_N}$ is the set of nondominated points.\medskip\\
+			$x^*\in X$ is \textcolor{black}{efficient} if $y^*$ is nondominated.\\
+			$\textcolor{blue}{X_E}$ is a complete set of efficient solutions.}
+
+\end{center}
+\vspace{5mm}
+
+
