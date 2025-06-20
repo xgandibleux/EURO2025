@@ -331,27 +331,6 @@ Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Stefan Ruzika. vOptSo
 
 \end{frame}
 
-% 
-% -------------------------------------------------------------------------------------------------------------------------------------------------------
-%
-\begin{frame}[fragile]
-  \frametitle{Julia}
- \vspace{2mm}
-
-
-  \only<1>{
-   \textcolor{white}{LLVM: middleman between source code and compiled native code}
- \hspace{-5mm}
- \centerline{\includegraphics[width=12.5cm]{llvmJulia1.png}}
- }
-  \only<2>{
-  LLVM: middleman between source code and compiled native code
- \hspace{-5mm}
- \centerline{\includegraphics[width=12.5cm]{llvmJulia2.png}}
- }  
-\end{frame}
-
-
 
 
 % 
@@ -419,6 +398,28 @@ Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Stefan Ruzika. vOptSo
 \end{frame}
 
 
+% 
+% -------------------------------------------------------------------------------------------------------------------------------------------------------
+%
+\begin{frame}[fragile]
+  \frametitle{Julia}
+ \vspace{2mm}
+
+
+  \only<1>{
+   \textcolor{white}{LLVM: middleman between source code and compiled native code}
+ \hspace{-5mm}
+ \centerline{\includegraphics[width=12.5cm]{llvmJulia1.png}}
+ }
+  \only<2>{
+  LLVM: middleman between source code and compiled native code
+ \hspace{-5mm}
+ \centerline{\includegraphics[width=12.5cm]{llvmJulia2.png}}
+ }  
+\end{frame}
+
+
+
 
 % 
 % -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -464,11 +465,11 @@ Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Stefan Ruzika. vOptSo
 %
 \begin{frame}
   \frametitle{Example (2/2)}
-\vspace{3mm}
+\vspace{1mm}
 
 \begin{itemize}
 \item \blue{C}\\
-\vspace{2mm}
+\vspace{1mm}
 
 \begin{itemize}
 \item[] \hspace{-7.75mm}\textit{without optimization} option\\
@@ -482,32 +483,37 @@ Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Stefan Ruzika. vOptSo
 \hspace{-7.5mm}\texttt{0.087682 seconds} %85.081 ms
 }
 \end{itemize}
-%\pause
+\pause
 
-\vspace{5mm}
+\vspace{3mm}
 
 \item \blue{Julia}\\
-\vspace{2mm}
+\vspace{1mm}
 
 \begin{itemize}
 \item[] \hspace{-7.75mm}\textit{1-to-1 straightforward} implementation\\
 {\scriptsize
 \hspace{-7.5mm}\texttt{26.732819 seconds (489.05 M allocations: 7.297 GiB, 0.29\% gc time)} %687.293 ms (23023 allocations: 8.56 MiB)
 }
-\vspace{-2mm}%\pause
+\vspace{-2mm}\pause
 
 \item[] \hspace{-7.95mm} \textit{julia style compliant} implementation\\
 {\scriptsize
 \hspace{-7.5mm}\texttt{0.252995 seconds (22.39 k allocations: 8.499 MiB)} %254.136 ms (22388 allocations: 8.50 MiB)
 }
-\vspace{2mm}%\pause
+\vspace{2mm}\pause
 
 \item[] \hspace{-7.85mm} \textit{polished} implementation \\
 {\scriptsize
 \hspace{-7.5mm}\texttt{0.114872 seconds (20.75 k allocations: 4.318 MiB)} %95.346 ms (20747 allocations: 4.32 MiB)
 }
 \end{itemize}
+\vspace{3mm}
+\item[] \hspace{-3.5mm}$\drsh$ \tiny{\url{https://github.com/xgandibleux/EURO2025/tree/main/2.examples\%20jl}}
+
 \end{itemize}
+
+
 
 \end{frame}
 
@@ -1070,6 +1076,7 @@ $$
 \texttt{ \hspace{-2mm}\greenxg{julia>}  set\_optimizer(modLP, HiGHS.Optimizer)}
 \end{tcolorbox} 
 \vspace{2mm}
+\pause
 
 \vspace{1mm}
 \begin{tcolorbox}[arc=1ex, colback=yellow!20, colframe=yellow!20, left=3pt, right=3pt, top=3pt, bottom=2pt]
@@ -1079,6 +1086,7 @@ $$
 \texttt{ \hspace{-2mm}\greenxg{julia>}  set\_silent(modLP)}
 \end{tcolorbox} 
 \vspace{2mm}
+\pause
 
 
 
@@ -1220,7 +1228,9 @@ Regular meeting since 2017: Cambridge (USA), Bordeaux (France), Santiago (Chile)
 \begin{enumerate}
 \item Installing the packages JuMP and HiGHS
 
-\item Coding and solving a IP problem \vspace{3mm}
+\item Coding and solving an IP problem \\
+$\drsh$ \tiny{\url{https://github.com/xgandibleux/EURO2025/blob/main/3.practice/Part2.ipynb}}
+\vspace{3mm}
 
 \end{enumerate}
 
@@ -1448,42 +1458,44 @@ $${x} \ {\in} \ {\mZ^{n_2}}\vspace{0mm}$$
 
 \begin{frame}{Existing MP Software for MOP}
 
+\small{
 \begin{itemize}
 
-\item ADBASE \hspace{27mm}MOLP \hfill (1975)\\
+\item ADBASE \hspace{32mm}MOLP \hfill (1975)\vspace{-1mm}\\
 \pause
-\item BENSOLVE (with GLPK) \hspace{3mm}MOLP \hfill (2014; last rev 2017)\\
+\item BENSOLVE (with GLPK) \hspace{10mm}MOLP \hfill (2014; last rev 2017)\vspace{-1mm}\\
 
-\item polySCIP (with SCIP) \hspace{7mm} MOLP, MOIP\hfill (2016; last rev 2017)\\
+\item polySCIP (with SCIP) \hspace{13.5mm} MOLP, MOIP\hfill (2016; last rev 2017)\vspace{-1mm}\\
 
-\item inner (with GLPK) \hspace{12.5mm} MOLP\hfill (2016?; last rev 2024)\\
+\item inner (with GLPK) \hspace{18.5mm} MOLP\hfill (2016?; last rev 2024)\vspace{-1mm}\\
 
-\item JuMP + vOptSolver$\mid$MOA + solvers \hspace{1mm} MOIP \hfill (2017, last rev 2025)\\
+\item JuMP + vOptSolver$\mid$MOA + solvers \hspace{3mm} MOIP \hfill (2017, last rev 2025)\vspace{-1mm}\\
 
-\item PaMILO (with Gurobi/CPLEX)  \hspace{0mm} MOMILP($Y_{SN}$) \hfill (2020?; last rev'25)\\
+\item PaMILO (with Gurobi/CPLEX)  \hspace{2mm} MOMILP($Y_{SN}$) \hfill (2020?; last rev'25)\vspace{-1mm}\\
 \pause
 
-\item HiGHS \hspace{29.25mm} \dots  \hfill (since Ver1.10?, 2025?)\\
+\item HiGHS \hspace{29.25mm} \dots  \hfill (since Ver1.10?, 2025?)\vspace{-1mm}\\
 
 \end{itemize}
 
 
-\vspace{3mm}
+%\vspace{3mm}
 
 %\vspace{-2mm}\rule{\linewidth}{.5pt}
 
 \vspace{3mm}
 
 \begin{itemize}
-\item Gurobi Optimization \hfill (since Ver7.0, 2016)\\
+\item Gurobi Optimization \hfill (since Ver7.0, 2016)\vspace{-1mm}\\
 
-\item IBM ILOG CPLEX Optimisation \hfill (since Ver12.7, 2016)\\
+\item IBM ILOG CPLEX Optimisation \hfill (since Ver12.7, 2016)\vspace{-1mm}\\
 
-\item FICO Xpress Optimization \hfill (since Ver9.0, 2022)\\
+\item FICO Xpress Optimization \hfill (since Ver9.0, 2022)\vspace{-1mm}\\
 
-\item Hexaly Optimizer \hfill (since Ver12.0, 2023)\\
+\item Hexaly Optimizer \hfill (since Ver12.0, 2023)\vspace{-1mm}\\
 
 \end{itemize}
+}
 
 \end{frame}
 
@@ -1543,7 +1555,7 @@ $${x} \ {\in} \ {\mZ^{n_2}}\vspace{0mm}$$
 %
 
 \begin{frame}
-  \frametitle{Algorithms currently available (v1.3.3)}
+  \frametitle{Algorithms currently available (v1.4.3)}
 
 
 \begin{enumerate}
@@ -2135,7 +2147,7 @@ s.t. & & 2x_1 & + &  3x_2 & \le & 30 \\
 %
 
 \begin{frame}
-  \frametitle{Example (1/2)}
+  \frametitle{Example (1/3)}
 %\vspace{3mm}
 
       {\scriptsize
@@ -2204,7 +2216,7 @@ s.t. & & 2x_1 & + &  3x_2 & \le & 30 \\
 %
 
 \begin{frame}
-  \frametitle{Example  (2/2)}
+  \frametitle{Example  (2/3)}
 \vspace{3mm}
 
 
@@ -2221,6 +2233,51 @@ Get $X_E$ and $Y_N$
 \end{tcolorbox} 
 }
 \vspace{2mm}
+
+
+%Plot $Y_N$
+%{\scriptsize
+%\begin{tcolorbox}[arc=1ex, colback=black!20, colframe=black!20, left=3pt, right=3pt, top=3pt, bottom=2pt]
+%\texttt{ \hspace{-1.5mm}\green{julia>} using Plots }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>} Plots.scatter( }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>} \                  [value(z[1]; result = i) for i in 1:result\_count(md)], }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>} \                  [-1 * value(z[2]; result = i) for i in 1:result\_count(md)]; }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>} \                  xlabel = "objective 1", }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>} \                  ylabel = "objective 2", }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>} \                  title = "objective space", }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>} \                  legend = false, }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>} \                  xlims = (0,25), }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>} \                  ylims = (0,25), }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>} \                  aspect\_ratio=:equal, }\\
+%\texttt{ \hspace{-1.5mm}\green{julia>}              ) }
+%\end{tcolorbox} 
+%}
+
+\end{frame}
+
+
+% 
+% -------------------------------------------------------------------------------------------------------------------------------------------------------
+%
+
+\begin{frame}
+  \frametitle{Example  (3/3)}
+\vspace{3mm}
+
+
+%Get $X_E$ and $Y_N$
+%
+%{\scriptsize
+%\begin{tcolorbox}[arc=1ex, colback=black!20, colframe=black!20, left=3pt, right=3pt, top=3pt, bottom=2pt]
+%\texttt{ \hspace{-1.5mm}\green{julia>}  for i in 1:result\_count(model) }\\
+%%\texttt{ \hspace{-2mm}\green{julia>}      \qquad z1\_opt = objective\_value(model; result = i)[1]}\\
+%%\texttt{ \hspace{-2mm}\green{julia>}      \qquad z2\_opt = -1 * objective\_value(model; result = i)[2] }\\
+%\texttt{ \hspace{-2mm}\green{julia>}      \qquad z\_opt = [objective\_value(md; result = i)[k] for k=1:p] }\\
+%\texttt{ \hspace{-2mm}\green{julia>}      \qquad x\_opt = value\redxg{.}(x; result = i)}\\
+%\texttt{ \hspace{-2mm}\green{julia>}  end }
+%\end{tcolorbox} 
+%}
+%\vspace{2mm}
 
 
 Plot $Y_N$
@@ -2242,6 +2299,7 @@ Plot $Y_N$
 }
 
 \end{frame}
+
 
 % 
 % -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2289,16 +2347,25 @@ From vOptGeneric.jl to MultiObjectiveAlgorithms.jl \ \textit{JuliaDays 2023}, 4-
   \frametitle{Roadmap}
 \vspace{3mm}
 
-The missing parts
+Working on it:
 
 \begin{itemize}
-\item solving MOLP with a  multi-objective simplex algorithm\\
+\item making the 3-obj algorithms reliable\\
+$\drsh$ working on a set of test instances
+\end{itemize}
+\bigskip
+\pause
+
+Missing parts:
+
+\begin{itemize}
+\item solving MOLP with a  \textbf{multi-objective simplex algorithm}\\
 $\drsh$ working on HiGHS2LP, a parametric variant of HiGHS
-\pause
-\item solving MOMILP with a  branch-and-xx algorithm\\
+\smallskip
+\item solving MOMILP with a  \textbf{branch-and-xx algorithm}\\
 $\drsh$ works in progress in the literature 
-\pause
-\item detecting problem-specific structure in a presolve\\
+\smallskip
+\item \textbf{detecting problem-specific structure} in a presolve\\
 $\drsh$ solving MOCO with specific algorithms 
 \end{itemize}
 
@@ -2319,7 +2386,9 @@ $\drsh$ solving MOCO with specific algorithms
 \begin{enumerate}
 \item Installing the packages MultiObjectiveAlgorithms and Plots
 
-\item Coding and solving a MOIP problem \vspace{3mm}
+\item Coding and solving a MOIP problem \\
+$\drsh$ \tiny{\url{https://github.com/xgandibleux/EURO2025/blob/main/3.practice/Part3.ipynb}}
+\vspace{3mm}
 
 \end{enumerate}
 \end{frame}
