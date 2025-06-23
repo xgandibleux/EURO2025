@@ -95,6 +95,20 @@
 % ================================================================
 % ================================================================
 
+
+% 
+% -------------------------------------------------------------------------------------------------------------------------------------------------------
+%
+\begin{frame}[fragile]
+  \frametitle{Slides, examples, notebooks}
+ \vspace{2mm}
+
+\centerline{\url{https://github.com/xgandibleux/EURO2025/}}
+
+\centerline{\includegraphics[width=5cm]{qrcode.png}}
+
+
+\end{frame}
 % 
 % -------------------------------------------------------------------------------------------------------------------------------------------------------
 %
@@ -509,7 +523,7 @@ Xavier Gandibleux, Gauthier Soleilhac, Anthony Przybylski, Stefan Ruzika. vOptSo
 }
 \end{itemize}
 \vspace{3mm}
-\item[] \hspace{-3.5mm}$\drsh$ \tiny{\url{https://github.com/xgandibleux/EURO2025/tree/main/2.examples\%20jl}}
+\item[] \hspace{-3.5mm}$\drsh$ \tiny{\url{https://github.com/xgandibleux/EURO2025/tree/main/2.examples}}
 
 \end{itemize}
 
@@ -1182,7 +1196,7 @@ $$
  \end{tcolorbox} 
  }
  
- \hspace{5mm}$\drsh$ {\tiny \url{https://github.com/xgandibleux/EURO2025/blob/main/2.examples\%20jl/1IP.ipynb}}
+ \hspace{5mm}$\drsh$ {\tiny \url{https://github.com/xgandibleux/EURO2025/blob/main/2.examples/1IP.ipynb}}
  
 \end{frame}
 
@@ -1477,7 +1491,7 @@ $${x} \ {\in} \ {\mZ^{n_2}}\vspace{0mm}$$
 \item PaMILO (with Gurobi/CPLEX)  \hspace{2mm} MOMILP($Y_{SN}$) \hfill (2020?; last rev'25)\vspace{-1mm}\\
 \pause
 
-\item HiGHS \hspace{29.25mm} \dots  \hfill (since Ver1.10?, 2025?)\vspace{-1mm}\\
+\item HiGHS \hspace{34.25mm} \dots  \hfill (since Ver1.10?, 2025?)\vspace{-1mm}\\
 
 \end{itemize}
 
@@ -1786,7 +1800,7 @@ Setup the MIP solver: e.g. \texttt{HiGHS}
 
 {\scriptsize
 \begin{tcolorbox}[arc=1ex, colback=black!20, colframe=black!20, left=3pt, right=3pt, top=3pt, bottom=2pt]
-\texttt{ \hspace{-1.5mm}\green{julia>} set\_optimizer(model,()->\redxg{MOA.Optimizer(HiGHS.Optimizer)})} 
+\texttt{ \hspace{-1.5mm}\green{julia>} set\_optimizer(model,\redxg{()->MOA.Optimizer(HiGHS.Optimizer)})} 
 \end{tcolorbox} 
 }
 \bigskip
@@ -1853,7 +1867,7 @@ Get $X_E$ and $Y_N$
       \end{columns} 
 
 \vspace{1mm}
- \hspace{5mm}$\drsh$ {\tiny \url{https://github.com/xgandibleux/EURO2025/blob/main/2.examples\%20jl/2IPex.ipynb}}
+ \hspace{5mm}$\drsh$ {\tiny \url{https://github.com/xgandibleux/EURO2025/blob/main/2.examples/2IPex.ipynb}}
 \end{frame}
 
 % ================================================================
@@ -2304,7 +2318,7 @@ Plot $Y_N$
 }
 
 \vspace{1mm}
- \hspace{5mm}$\drsh$ {\tiny \url{https://github.com/xgandibleux/EURO2025/blob/main/2.examples\%20jl/2IPim.ipynb}}
+ \hspace{5mm}$\drsh$ {\tiny \url{https://github.com/xgandibleux/EURO2025/blob/main/2.examples\/2IPim.ipynb}}
  
 
 
@@ -2362,7 +2376,7 @@ Working on it:
 \begin{itemize}
 \item making the 3-obj algorithms reliable\\
 $\drsh$ working on a set of test instances\\
-$\drsh$ {\tiny \url{https://github.com/xgandibleux/EURO2025/blob/main/2.examples\%20jl/3IP.ipynb}}
+$\drsh$ {\tiny \url{https://github.com/xgandibleux/EURO2025/blob/main/2.examples/3IP.ipynb}}
 \end{itemize}
 \bigskip
 \pause
